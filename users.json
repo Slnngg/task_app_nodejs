@@ -1,0 +1,15 @@
+{
+    "user1": {
+      "id":1,
+      "firstname":"soko",
+      "lastname":"soko",
+      "email":"soko@gmail.com"
+    },
+  
+    "user2":  {
+      "id":2,
+      "firstname":"naraa",
+      "lastname":"saraa",
+      "email":"sar@gmail.com"
+    }
+  }
