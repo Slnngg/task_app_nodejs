@@ -3,13 +3,15 @@
       "id":1,
       "firstname":"soko",
       "lastname":"soko",
-      "email":"soko@gmail.com"
+      "email":"soko@gmail.com",
+      "password": "123456"
     },
   
     "user2":  {
       "id":2,
       "firstname":"naraa",
       "lastname":"saraa",
-      "email":"sar@gmail.com"
+      "email":"sar@gmail.com",
+      "password": "654321"
     }
-  }
+}
