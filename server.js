@@ -7,7 +7,7 @@ app.use(express.json());
 var fs = require("fs");
 const { use } = require("./routes");
 
-app.get("/getUsers", function (req, res) {
+app.get("/user/info", function (req, res) {
   fs.readFile(__dirname + "/" + "users.json", "utf8", function (err, data) {
     console.log(data);
     res.end(data);
@@ -17,13 +17,19 @@ app.get("/getUsers", function (req, res) {
 app.route("/user/login").post(function (req, res) {
   const email = req.body.email;
   const password = req.body.password;
-  if (!email || !password) {
-    return res.status(400).json({ error: "Аль нэг параметр дутуу байна" });
-  }
+  // if (!email || !password) {
+  //   return res
+  //     .status(400)
+  //     .json({ success: 0, error: "Аль нэг параметр дутуу байна" });
+  // }
 
-  const user = { name: name, password: password };
+  const user = { email: email, password: password };
   const accessToken = jwt.sign({ user }, "my_secret_key");
-  res.json({ message: "Та амжилттай нэвтэрлээ", accessToken: accessToken });
+  res.json({
+    success: 1,
+    message: "Та амжилттай нэвтэрлээ",
+    accessToken: accessToken,
+  });
 });
 
 // app.post("/user/login", function (req, res) {
